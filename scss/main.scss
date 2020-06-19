@@ -1,0 +1,19 @@
+/* Variables */
+
+$green-text: hsl(163, 72%, 41%);
+$red-text: hsl(356, 69%, 56%);
+
+$facebook-border-color: hsl(208, 92%, 53%);
+$twitter-border-color: hsl(203, 89%, 53%);
+$instagram-border-color: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+$youtube-border-color: hsl(348, 97%, 39%);
+
+$dk-theme-toggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
+$lt-theme-toggle: hsl(230, 22%, 74%);
+
+/* Light Theme-- Default */ 
+$color-primary-bg: hsl(0, 0%, 100%);
+
+body {
+    background: $color-primary-bg;
+}
