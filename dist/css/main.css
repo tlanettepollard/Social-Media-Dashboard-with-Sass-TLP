@@ -1,5 +1,13 @@
 /* Variables */
 /* Light Theme-- Default */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: 1px solid black;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
 body {
   background: white;
 }
