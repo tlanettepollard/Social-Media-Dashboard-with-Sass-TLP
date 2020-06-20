@@ -371,7 +371,22 @@ footer {
         color: $color-text-dk-secondary;
     }
     .toggle-button {
-        background: linear-gradient (to right, hsl(210, 78%, 56%) to hsl(146, 68%, 55%));
+        background: $dk-theme-toggle;
+    }
+    .theme-label {
+        color: $color-text-dk-primary;
+    }
+    .first__dashboard-container {
+        .social__card {
+            background: $color-card-dk-bg;
+            color: 
+        }
+        .card__count {
+            color: $color-text-dk-secondary;
+        }
+        .card__description {
+            color: $color-text-dk-primary;
+        }
     }
     
 }
