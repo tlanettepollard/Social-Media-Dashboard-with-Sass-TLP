@@ -119,7 +119,7 @@ header {
         padding-bottom: 2em;
     }
     .dashboard__title {
-        font-size: 1.5em;
+        font-size: 1.65em;
         font-weight: 700;
         color: $color-text-lt-secondary;
     }
@@ -128,7 +128,7 @@ header {
         font-size: 0.7em;
         font-weight: 700;
         color: $color-text-lt-primary;
-        margin-top: 10px;
+        margin-top: -1em;
     }
     .toggle-wrapper {
         display: flex;
@@ -351,6 +351,9 @@ footer {
 .dark {
     background: $color-primary-dk-bg;
     color: $white;
+    .dashboard__title {
+
+    }
 }
 
 
