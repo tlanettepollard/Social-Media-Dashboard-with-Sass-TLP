@@ -130,9 +130,10 @@ header {
         color: $color-text-lt-secondary;
         margin-top: -1em;
     }
-    .toggle-wrapper {
+    .toggle {
         display: flex;
         align-items: center;
+        flex-direction: row;
         justify-content: center;
         cursor: pointer;
         transition: all 0.3s ease;
@@ -177,7 +178,7 @@ header {
         box-shadow: 0 0px 15px hsl(230, 22%, 74%);
         background: $white;
     } */
-   /* input:checked + .toggle-button {
+    /*input:checked + .toggle-button {
         background-image: linear-gradient(to right, hsl(210, 78%, 56%) to hsl(146, 68%, 55%));
     }
     input:focus + .toggle-button {
