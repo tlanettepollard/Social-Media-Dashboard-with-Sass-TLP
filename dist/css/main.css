@@ -83,38 +83,6 @@ body:before {
 
 header {
   padding-top: 0;
-  /*.toggle-button:before {
-        position: absolute;
-        content:"";
-        height: 0.9em;
-        width: 0.9em;
-        left: 0.2em;
-        bottom: 0.15em;
-
-        margin: auto 0;
-        -webkit-transition: 0.4s;
-        transition: 0.4s;
-        box-shadow: 0 0px 15px hsl(230, 22%, 74%);
-        background: $white;
-    } */
-  /*input:checked + .toggle-button {
-        background-image: linear-gradient(to right, hsl(210, 78%, 56%) to hsl(146, 68%, 55%));
-    }
-    input:focus + .toggle-button {
-        box-shadow: 0 0 1px hsl(210, 78%, 56%);
-    }
-    input:checked + .toggle-button:before {
-        -webkit-transform: translateX(24px);
-        -ms-transform: translateX(26px);
-        transform: translateX(24px);
-        background-color: white;
-    }*/
-  /* .round {
-        border-radius: 34px;
-    }
-    .round:before {
-        border-radius: 50%;
-    }*/
 }
 
 header .header__container {
@@ -167,11 +135,9 @@ header .theme-toggle {
   position: relative;
   display: inline-block;
   height: 1.2em;
-  width: 3em;
+  width: 2.65em;
   background-color: #aeb3cb;
   border-radius: 50px;
-  border: none;
-  outline: none;
 }
 
 header .theme-toggle input {
@@ -181,16 +147,46 @@ header .theme-toggle input {
 header .toggle-button {
   position: absolute;
   cursor: pointer;
-  top: 2px;
-  left: 4px;
+  top: 0;
+  left: 0;
   right: 0;
   bottom: 0;
-  width: 20px;
-  height: 20px;
-  background: #ffffff;
-  border-radius: 100%;
+  border-radius: 34px;
+  background-color: #aeb3cb;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+
+header .toggle-button:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  top: 0.07em;
+  left: 0.4em;
+  bottom: 0;
+  margin: auto 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  -webkit-box-shadow: 0 0px 15px #aeb3cb;
+          box-shadow: 0 0px 15px #aeb3cb;
+  background: #ffffff;
+  border-radius: 50%;
+}
+
+header input:checked + .toggle-button {
+  background: -webkit-gradient(linear, left top, right top, color-stop(to, #378fe6));
+  background: linear-gradient(to right, #378fe6 to #3eda82);
+}
+
+header input:focus + .toggle-button {
+  -webkit-box-shadow: 0 0 1px #f5f7ff;
+          box-shadow: 0 0 1px #f5f7ff;
+}
+
+header input:checked + .toggle-button:before {
+  -webkit-transform: translateX(20px);
+          transform: translateX(20px);
 }
 
 header .theme-label {
