@@ -17,7 +17,7 @@ html {
 body {
   margin: 0;
   background: white;
-  color: #1e202a;
+  color: #63687e;
   min-height: 100vh;
   padding: 2rem;
 }
@@ -27,7 +27,7 @@ body:before {
   position: absolute;
   top: 0;
   left: 0;
-  height: 28vh;
+  height: 30vh;
   width: 100vw;
   z-index: -1;
   background-color: #f5f7ff;
@@ -44,7 +44,7 @@ body:before {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 82.5%;
-  margin: 30px auto;
+  margin: 0 auto;
 }
 
 .up-icon {
@@ -82,7 +82,7 @@ body:before {
 }
 
 header {
-  padding-top: 10px;
+  padding-top: 0;
 }
 
 header .header__container {
@@ -184,7 +184,7 @@ header .round:before {
 header .theme-label {
   font-size: 0.7em;
   font-weight: 700;
-  color: #63687e;
+  color: #1e202a;
   margin-right: 1em;
 }
 
@@ -195,7 +195,7 @@ header .theme-label {
       grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   grid-gap: 1.2em;
   text-align: center;
-  margin-top: 10px;
+  margin-top: -10px;
   padding-bottom: 3em;
 }
 
@@ -205,7 +205,8 @@ header .theme-label {
   border-top-width: 4px;
   text-align: center;
   border-radius: 5px;
-  height: 245px;
+  width: 100%;
+  height: auto;
 }
 
 .first__dashboard-container .social__card:hover {
@@ -283,7 +284,7 @@ header .theme-label {
   color: #63687e;
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 1em;
+  font-size: 0.75em;
   text-transform: uppercase;
   letter-spacing: 5px;
 }
@@ -309,11 +310,13 @@ header .theme-label {
   display: grid;
   -ms-grid-columns: auto auto;
       grid-template-columns: auto auto;
-  padding: 1em;
+  padding: 0 1em;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   border-radius: 5px;
+  width: 100%;
+  height: auto;
 }
 
 .second__dashboard-container .overview__card:hover {
@@ -336,11 +339,6 @@ header .theme-label {
   font-size: 1.5em;
   color: #1e202a;
   font-weight: 700;
-  padding-top: 1em;
-}
-
-.second__dashboard-container .social-stats {
-  padding-top: 2.1em;
 }
 
 .second__dashboard-container .social-stats span {
@@ -372,5 +370,12 @@ footer {
 .dark {
   background: #1e202a;
   color: #ffffff;
+}
+
+.dark .dashboard__title {
+  font-size: 1.65em;
+  font-weight: 700;
+  line-height: inherit;
+  color: #1e202a;
 }
 /*# sourceMappingURL=main.css.map */

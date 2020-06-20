@@ -20,16 +20,16 @@ $lt-theme-toggle: hsl(230, 22%, 74%);
 $color-primary-lt-bg: hsl(0, 0%, 100%);
 $color-top-lt-bg: hsl(225, 100%, 98%);
 $color-card-lt-bg: hsl(227, 47%, 96%);
-$color-text-lt-primary: hsl(228, 12%, 44%);
-$color-text-lt-secondary: hsl(230, 17%, 14%);
+$color-text-lt-primary: hsl(230, 17%, 14%);
+$color-text-lt-secondary: hsl(228, 12%, 44%);
 $color-lt-hover: hsl(231, 53%, 90%);
 
 //Dark Theme
 $color-primary-dk-bg: hsl(230, 17%, 14%);
 $color-top-dk-bg: hsl(232, 19%, 15%);
 $color-card-dk-bg: hsl(228, 28%, 20%);
-$color-text-dk-primary: hsl(228, 34%, 66%);
-$color-text-dk-secondary: hsl(0, 0%, 100%);
+$color-text-dk-primary: hsl(0, 0%, 100%);
+$color-text-dk-secondary: hsl(228, 34%, 66%);
 $color-dk-hover: hsl(229, 20%, 60%);
 
 
@@ -60,7 +60,7 @@ body:before {
     position: absolute;
     top: 0;
     left: 0;
-    height: 28vh;
+    height: 30vh;
     width: 100vw;
     z-index: -1;
     background-color: $color-top-lt-bg;
@@ -72,7 +72,7 @@ body:before {
     display: flex;
     flex-direction: column;
     width: 82.5%;
-    margin: 30px auto;
+    margin: 0 auto;
 }
 
 .up-icon {
@@ -104,14 +104,14 @@ body:before {
 }
 
 .user__text {
-    color: $color-text-lt-primary;
+    color: $color-text-lt-secondary;
     font-size: 0.85em;
     font-weight: 700;
 }
 
 // Header Style
 header {
-    padding-top: 10px;
+    padding-top: 0;
     .header__container {
         display: flex;
         justify-content: space-between;
@@ -121,13 +121,13 @@ header {
     .dashboard__title {
         font-size: 1.65em;
         font-weight: 700;
-        color: $color-text-lt-secondary;
+        color: $color-text-lt-primary;
     }
     .followers,
     .theme {
         font-size: 0.7em;
         font-weight: 700;
-        color: $color-text-lt-primary;
+        color: $color-text-lt-secondary;
         margin-top: -1em;
     }
     .toggle-wrapper {
@@ -198,7 +198,7 @@ header {
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     grid-gap: 1.2em;
     text-align: center;
-    margin-top: 10px;
+    margin-top: -10px;
     padding-bottom: 3em;
 
     .social__card {
@@ -207,7 +207,8 @@ header {
         border-top-width: 4px;
         text-align: center;
         border-radius: 5px;
-        height: 245px;
+        width: 100%;
+        height: auto;
     }
     .social__card:hover {
         background-color: $color-lt-hover;
@@ -262,13 +263,13 @@ header {
         margin-bottom: 0;
         font-size: 3em;
         font-weight:900;
-        color: $color-text-lt-secondary;
+        color: $color-text-lt-primary;
     }
     .card__description {
-        color: $color-text-lt-primary;
+        color: $color-text-lt-secondary;
         margin-top: 0;
         margin-bottom: 0;
-        font-size: 1em;
+        font-size: 0.75em;
         text-transform: uppercase;
         letter-spacing: 5px;
     }  
@@ -277,7 +278,7 @@ header {
 // Second Dashboard Row
 .overview__title {
     font-size: 1.3em;
-    color: $color-text-lt-primary;
+    color: $color-text-lt-secondary;
     font-weight: 700;
 }
 .second__dashboard-container {
@@ -290,9 +291,12 @@ header {
         background-color: $color-card-lt-bg;
         display: grid;
         grid-template-columns: auto auto;
-        padding: 1em;
+        padding: 0 1em;
         align-items: center;
         border-radius: 5px;
+        width: 100%;
+        height: auto;
+        
     }
     .overview__card:hover {
         background-color: $color-lt-hover;
@@ -303,17 +307,15 @@ header {
     }
     .overview__card p:nth-of-type(1) {
         font-size: 0.7em;
-        color: $color-text-lt-primary;
+        color: $color-text-lt-secondary;
         font-weight: 700;
     }
     .overview__card p:nth-of-type(2) {
         font-size: 1.5em;
-        color: $color-text-lt-secondary;
+        color: $color-text-lt-primary;
         font-weight: 700;
-        padding-top: 1em;
-    }
-    .social-stats {
-        padding-top: 2.1em;
+        
+       
     }
     
     .social-stats span {
@@ -352,7 +354,10 @@ footer {
     background: $color-primary-dk-bg;
     color: $white;
     .dashboard__title {
-
+        font-size: 1.65em;
+        font-weight: 700;
+        line-height: inherit;
+        color: $color-text-lt-primary;
     }
 }
 
