@@ -81,6 +81,113 @@ body:before {
   font-weight: 700;
 }
 
+header {
+  padding-top: 10px;
+}
+
+header .header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 2em;
+}
+
+header .dashboard__title {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #1e202a;
+}
+
+header .followers,
+header .theme {
+  font-size: 0.7em;
+  font-weight: 700;
+  color: #63687e;
+  margin-top: 10px;
+}
+
+header .toggle-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .theme-toggle {
+  position: relative;
+  display: inline-block;
+  height: 1.2em;
+  width: 3em;
+}
+
+header .theme-toggle input {
+  display: none;
+}
+
+header .toggle-button {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #aeb3cb;
+}
+
+header .toggle-button:before {
+  position: absolute;
+  content: "";
+  height: 0.9em;
+  width: 0.9em;
+  left: 0.2em;
+  bottom: 0.15em;
+  margin: auto 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  -webkit-box-shadow: 0 0px 15px #aeb3cb;
+          box-shadow: 0 0px 15px #aeb3cb;
+  background-color: white;
+}
+
+header input:checked + .toggle-button {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(to, #378fe6));
+  background-image: linear-gradient(to right, #378fe6 to #3eda82);
+}
+
+header input:focus + .toggle-button {
+  -webkit-box-shadow: 0 0 1px #378fe6;
+          box-shadow: 0 0 1px #378fe6;
+}
+
+header input:checked + .toggle-button:before {
+  -webkit-transform: translateX(24px);
+  transform: translateX(24px);
+  background-color: white;
+}
+
+header .round {
+  border-radius: 34px;
+}
+
+header .round:before {
+  border-radius: 50%;
+}
+
+header .theme-label {
+  font-size: 0.7em;
+  font-weight: 700;
+  color: #63687e;
+  margin-right: 1em;
+}
+
 .attribution {
   font-size: 1em;
   text-align: center;
