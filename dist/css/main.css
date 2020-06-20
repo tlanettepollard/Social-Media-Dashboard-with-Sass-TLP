@@ -126,6 +126,9 @@ header .theme-toggle {
   display: inline-block;
   height: 1.2em;
   width: 3em;
+  background-color: #aeb3cb;
+  border-radius: 50px;
+  border: none;
 }
 
 header .theme-toggle input {
@@ -139,7 +142,6 @@ header .toggle-button {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #aeb3cb;
 }
 
 header .toggle-button:before {
@@ -387,5 +389,9 @@ footer {
 .dark .followers,
 .dark .theme {
   color: #8b97c6;
+}
+
+.dark .toggle-button {
+  background: linear-gradient to right, #378fe6 to #3eda82;
 }
 /*# sourceMappingURL=main.css.map */
