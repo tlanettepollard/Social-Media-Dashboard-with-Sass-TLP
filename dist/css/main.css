@@ -154,7 +154,7 @@ header .toggle-button:before {
   transition: 0.4s;
   -webkit-box-shadow: 0 0px 15px #aeb3cb;
           box-shadow: 0 0px 15px #aeb3cb;
-  background-color: white;
+  background-color: #ffffff;
 }
 
 header input:checked + .toggle-button {
@@ -367,5 +367,10 @@ footer {
 
 .attribution a {
   color: #3e52a3;
+}
+
+.dark {
+  background: #1e202a;
+  color: #ffffff;
 }
 /*# sourceMappingURL=main.css.map */
