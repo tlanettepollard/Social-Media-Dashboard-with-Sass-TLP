@@ -349,6 +349,14 @@ header .theme-label {
   font-weight: 700;
 }
 
+footer {
+  margin-top: 100px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100px;
+}
+
 .attribution {
   font-size: 1em;
   text-align: center;
