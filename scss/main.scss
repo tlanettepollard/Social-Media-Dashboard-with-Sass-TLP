@@ -207,6 +207,7 @@ header {
         border-top-width: 4px;
         text-align: center;
         border-radius: 5px;
+        padding: 1em;
         width: 100%;
         height: auto;
     }
@@ -353,12 +354,20 @@ footer {
 .dark {
     background: $color-primary-dk-bg;
     color: $white;
+    body:before {
+        background-color: $color-top-dk-bg;
+    }
     .dashboard__title {
         font-size: 1.65em;
         font-weight: 700;
         line-height: inherit;
         color: $color-text-lt-primary;
     }
+    .followers,
+    .theme {
+        color: $color-text-dk-secondary;
+    }
+    
 }
 
 

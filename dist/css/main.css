@@ -205,6 +205,7 @@ header .theme-label {
   border-top-width: 4px;
   text-align: center;
   border-radius: 5px;
+  padding: 1em;
   width: 100%;
   height: auto;
 }
@@ -372,10 +373,19 @@ footer {
   color: #ffffff;
 }
 
+.dark body:before {
+  background-color: #1f212e;
+}
+
 .dark .dashboard__title {
   font-size: 1.65em;
   font-weight: 700;
   line-height: inherit;
   color: #1e202a;
+}
+
+.dark .followers,
+.dark .theme {
+  color: #8b97c6;
 }
 /*# sourceMappingURL=main.css.map */
