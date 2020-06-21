@@ -13,23 +13,23 @@ $twitter-border-color: hsl(203, 89%, 53%);
 $instagram-border-color: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
 $youtube-border-color: hsl(348, 97%, 39%);
 
-$dk-theme-toggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
+$dk-theme-toggle: linear-gradient(to right, hsl(210, 78%, 56%) to hsl(146, 68%, 55%));
 $lt-theme-toggle: hsl(230, 22%, 74%);
 
 //Light Theme-- Default 
 $color-primary-lt-bg: hsl(0, 0%, 100%);
 $color-top-lt-bg: hsl(225, 100%, 98%);
 $color-card-lt-bg: hsl(227, 47%, 96%);
-$color-text-lt-primary: hsl(228, 12%, 44%);
-$color-text-lt-secondary: hsl(230, 17%, 14%);
+$color-text-lt-primary: hsl(230, 17%, 14%);
+$color-text-lt-secondary: hsl(228, 12%, 44%);
 $color-lt-hover: hsl(231, 53%, 90%);
 
 //Dark Theme
 $color-primary-dk-bg: hsl(230, 17%, 14%);
 $color-top-dk-bg: hsl(232, 19%, 15%);
 $color-card-dk-bg: hsl(228, 28%, 20%);
-$color-text-dk-primary: hsl(228, 34%, 66%);
-$color-text-dk-secondary: hsl(0, 0%, 100%);
+$color-text-dk-primary: hsl(0, 0%, 100%);
+$color-text-dk-secondary: hsl(228, 34%, 66%);
 $color-dk-hover: hsl(229, 20%, 60%);
 
 
@@ -60,7 +60,7 @@ body:before {
     position: absolute;
     top: 0;
     left: 0;
-    height: 28vh;
+    height: 30vh;
     width: 100vw;
     z-index: -1;
     background-color: $color-top-lt-bg;
@@ -72,7 +72,7 @@ body:before {
     display: flex;
     flex-direction: column;
     width: 82.5%;
-    margin: 30px auto;
+    margin: 0 auto;
 }
 
 .up-icon {
@@ -104,14 +104,14 @@ body:before {
 }
 
 .user__text {
-    color: $color-text-lt-primary;
+    color: $color-text-lt-secondary;
     font-size: 0.85em;
     font-weight: 700;
 }
 
 // Header Style
 header {
-    padding-top: 10px;
+    padding-top: 0;
     .header__container {
         display: flex;
         justify-content: space-between;
@@ -119,26 +119,33 @@ header {
         padding-bottom: 2em;
     }
     .dashboard__title {
-        font-size: 1.5em;
+        font-size: 1.65em;
         font-weight: 700;
-        color: $color-text-lt-secondary;
+        color: $color-text-lt-primary;
     }
     .followers,
     .theme {
         font-size: 0.7em;
         font-weight: 700;
-        color: $color-text-lt-primary;
-        margin-top: 10px;
+        color: $color-text-lt-secondary;
+        margin-top: -1em;
     }
-    .toggle-wrapper {
+    .toggle {
         display: flex;
         align-items: center;
+        flex-direction: row;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
     }
     .theme-toggle {
         position: relative;
         display: inline-block;
         height: 1.2em;
-        width: 3em;  
+        width: 2.65em;  
+        background-color: hsl(230, 22%, 74%);
+        border-radius: 50px;
+        
     }
     .theme-toggle input {
         display: none;
@@ -150,38 +157,34 @@ header {
         left: 0;
         right: 0;
         bottom: 0;
+        border-radius: 34px;
         background-color: hsl(230, 22%, 74%);
+        transition: all 0.3s ease;
     }
     .toggle-button:before {
         position: absolute;
         content:"";
-        height: 0.9em;
-        width: 0.9em;
-        left: 0.2em;
-        bottom: 0.15em;
+        height: 20px;
+        width: 20px;
+        top: 0.07em;
+        left: 0.4em;
+        bottom: 0;
         margin: auto 0;
         -webkit-transition: 0.4s;
         transition: 0.4s;
         box-shadow: 0 0px 15px hsl(230, 22%, 74%);
-        background-color: $white;
-    }
+        background: $white;
+        border-radius: 50%;
+    } 
+    
     input:checked + .toggle-button {
-        background-image: linear-gradient(to right, hsl(210, 78%, 56%) to hsl(146, 68%, 55%));
+        background: $dk-theme-toggle;
     }
-    input:focus + .toggle-button {
-        box-shadow: 0 0 1px hsl(210, 78%, 56%);
+    input:focus + .toggle-button{
+        box-shadow: 0 0 1px hsl(225, 100%, 98%);
     }
     input:checked + .toggle-button:before {
-        -webkit-transform: translateX(24px);
-        -ms-transform: translateX(26px);
-        transform: translateX(24px);
-        background-color: white;
-    }
-    .round {
-        border-radius: 34px;
-    }
-    .round:before {
-        border-radius: 50%;
+        transform: translateX(20px);
     }
     .theme-label {
         font-size: 0.7em;
@@ -198,7 +201,7 @@ header {
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     grid-gap: 1.2em;
     text-align: center;
-    margin-top: 10px;
+    margin-top: -10px;
     padding-bottom: 3em;
 
     .social__card {
@@ -207,7 +210,9 @@ header {
         border-top-width: 4px;
         text-align: center;
         border-radius: 5px;
-        height: 245px;
+        padding: 1em;
+        width: 100%;
+        height: auto;
     }
     .social__card:hover {
         background-color: $color-lt-hover;
@@ -262,13 +267,13 @@ header {
         margin-bottom: 0;
         font-size: 3em;
         font-weight:900;
-        color: $color-text-lt-secondary;
+        color: $color-text-lt-primary;
     }
     .card__description {
-        color: $color-text-lt-primary;
+        color: $color-text-lt-secondary;
         margin-top: 0;
         margin-bottom: 0;
-        font-size: 1em;
+        font-size: 0.75em;
         text-transform: uppercase;
         letter-spacing: 5px;
     }  
@@ -277,7 +282,7 @@ header {
 // Second Dashboard Row
 .overview__title {
     font-size: 1.3em;
-    color: $color-text-lt-primary;
+    color: $color-text-lt-secondary;
     font-weight: 700;
 }
 .second__dashboard-container {
@@ -290,9 +295,12 @@ header {
         background-color: $color-card-lt-bg;
         display: grid;
         grid-template-columns: auto auto;
-        padding: 1em;
+        padding: 0 1em;
         align-items: center;
         border-radius: 5px;
+        width: 100%;
+        height: auto;
+        
     }
     .overview__card:hover {
         background-color: $color-lt-hover;
@@ -303,17 +311,15 @@ header {
     }
     .overview__card p:nth-of-type(1) {
         font-size: 0.7em;
-        color: $color-text-lt-primary;
+        color: $color-text-lt-secondary;
         font-weight: 700;
     }
     .overview__card p:nth-of-type(2) {
         font-size: 1.5em;
-        color: $color-text-lt-secondary;
+        color: $color-text-lt-primary;
         font-weight: 700;
-        padding-top: 1em;
-    }
-    .social-stats {
-        padding-top: 2.1em;
+        
+       
     }
     
     .social-stats span {
@@ -351,6 +357,38 @@ footer {
 .dark {
     background: $color-primary-dk-bg;
     color: $white;
+    body:before {
+        background-color: $color-top-dk-bg;
+    }
+    .dashboard__title {
+        font-size: 1.65em;
+        font-weight: 700;
+        line-height: inherit;
+        color: $color-text-lt-primary;
+    }
+    .followers,
+    .theme {
+        color: $color-text-dk-secondary;
+    }
+    .toggle-button {
+        background: $dk-theme-toggle;
+    }
+    .theme-label {
+        color: $color-text-dk-primary;
+    }
+    .first__dashboard-container {
+        .social__card {
+            background: $color-card-dk-bg;
+            color: 
+        }
+        .card__count {
+            color: $color-text-dk-secondary;
+        }
+        .card__description {
+            color: $color-text-dk-primary;
+        }
+    }
+    
 }
 
 
