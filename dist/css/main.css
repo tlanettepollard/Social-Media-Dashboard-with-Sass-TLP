@@ -16,24 +16,19 @@ html {
 
 body {
   margin: 0;
-  background: white;
-  color: #63687e;
-  min-height: 100vh;
-  padding: 2rem;
+  background: #ffffff;
 }
 
-body:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 30vh;
-  width: 100vw;
-  z-index: -1;
+.top-pattern {
+  width: 99%;
+  height: 225px;
+  z-index: -99;
   background-color: #f5f7ff;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
+  position: absolute;
+  border-radius: 0px 0px 10px 10px;
+  margin: auto;
 }
+
 
 .container {
   display: -webkit-box;

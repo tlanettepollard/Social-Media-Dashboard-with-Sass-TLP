@@ -41,7 +41,7 @@ $color-dk-hover: hsl(229, 20%, 60%);
 
 html {
     font-size: 125%;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.4;
     font-family: "Inter", sans-serif;
 
@@ -50,22 +50,16 @@ html {
 body {
     margin: 0;
     background: $color-primary-lt-bg;
-    color: $color-text-lt-secondary;
-    min-height: 100vh;
-    padding: 2rem; 
 }
 
-body:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 30vh;
-    width: 100vw;
-    z-index: -1;
+.top-pattern {
+    width: 99%;
+    height: 225px;
+    z-index: -99;
     background-color: $color-top-lt-bg;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
+    position: absolute;
+    border-radius: 0px 0px 10px 10px;
+    margin: auto;
 }
 
 .container {
@@ -357,9 +351,7 @@ footer {
 .dark {
     background: $color-primary-dk-bg;
     color: $white;
-    body:before {
-        background-color: $color-top-dk-bg;
-    }
+
     .dashboard__title {
         font-size: 1.65em;
         font-weight: 700;
