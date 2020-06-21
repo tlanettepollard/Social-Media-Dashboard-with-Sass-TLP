@@ -52,14 +52,17 @@ body {
     background: $color-primary-lt-bg;
 }
 
-.top-pattern {
-    width: 99%;
-    height: 225px;
-    z-index: -99;
-    background-color: $color-top-lt-bg;
+body:before {
+    content: "";
     position: absolute;
-    border-radius: 0px 0px 10px 10px;
-    margin: auto;
+    top: 0;
+    left: 0;
+    height: 28vh;
+    width: 100vw;
+    z-index: -1;
+    background-color: $color-top-lt-bg;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
 }
 
 .container {
@@ -371,7 +374,7 @@ footer {
     .first__dashboard-container {
         .social__card {
             background: $color-card-dk-bg;
-            color: 
+            color: $color-text-dk-primary;
         }
         .card__count {
             color: $color-text-dk-secondary;
