@@ -41,7 +41,7 @@ $color-dk-hover: hsl(229, 20%, 60%);
 
 html {
     font-size: 125%;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.4;
     font-family: "Inter", sans-serif;
 
@@ -50,9 +50,6 @@ html {
 body {
     margin: 0;
     background: $color-primary-lt-bg;
-    color: $color-text-lt-secondary;
-    min-height: 100vh;
-    padding: 2rem; 
 }
 
 body:before {
@@ -60,7 +57,7 @@ body:before {
     position: absolute;
     top: 0;
     left: 0;
-    height: 30vh;
+    height: 28vh;
     width: 100vw;
     z-index: -1;
     background-color: $color-top-lt-bg;
@@ -357,9 +354,7 @@ footer {
 .dark {
     background: $color-primary-dk-bg;
     color: $white;
-    body:before {
-        background-color: $color-top-dk-bg;
-    }
+
     .dashboard__title {
         font-size: 1.65em;
         font-weight: 700;
@@ -379,7 +374,7 @@ footer {
     .first__dashboard-container {
         .social__card {
             background: $color-card-dk-bg;
-            color: 
+            color: $color-text-dk-primary;
         }
         .card__count {
             color: $color-text-dk-secondary;
