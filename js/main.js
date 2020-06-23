@@ -1,5 +1,5 @@
 //Toggle Switch
 function themeToggle(){
-    let element = document.querySelector("body");
+    let element = document.querySelector("html");
     element.classList.toggle(".dark");
 }

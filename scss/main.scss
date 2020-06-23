@@ -352,37 +352,13 @@ footer {
 //Dark Theme
 
 .dark {
-    background: $color-primary-dk-bg;
-    color: $white;
-
-    .dashboard__title {
-        font-size: 1.65em;
-        font-weight: 700;
-        line-height: inherit;
-        color: $color-text-lt-primary;
-    }
-    .followers,
-    .theme {
-        color: $color-text-dk-secondary;
-    }
-    .toggle-button {
-        background: $dk-theme-toggle;
-    }
-    .theme-label {
-        color: $color-text-dk-primary;
-    }
-    .first__dashboard-container {
-        .social__card {
-            background: $color-card-dk-bg;
-            color: $color-text-dk-primary;
-        }
-        .card__count {
-            color: $color-text-dk-secondary;
-        }
-        .card__description {
-            color: $color-text-dk-primary;
-        }
-    }
+  body {
+      background-color: $color-primary-dk-bg;
+      color: $white;
+      body:before {
+        background-color: $color-top-dk-bg;
+      }
+  }  
     
 }
 
