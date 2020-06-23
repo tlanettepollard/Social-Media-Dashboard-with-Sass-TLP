@@ -16,7 +16,7 @@ html {
 
 body {
   margin: 0;
-  background: white;
+  background-color: white;
 }
 
 body:before {
@@ -128,7 +128,7 @@ header .toggle {
   transition: all 0.3s ease;
 }
 
-header .theme-toggle {
+header .switch {
   position: relative;
   display: inline-block;
   height: 1.2em;
@@ -137,7 +137,7 @@ header .theme-toggle {
   border-radius: 50px;
 }
 
-header .theme-toggle input {
+header .switch input {
   display: none;
 }
 
@@ -167,13 +167,12 @@ header .toggle-button:before {
   transition: 0.4s;
   -webkit-box-shadow: 0 0px 15px #aeb3cb;
           box-shadow: 0 0px 15px #aeb3cb;
-  background: #ffffff;
+  background-color: #ffffff;
   border-radius: 50%;
 }
 
 header input:checked + .toggle-button {
-  background: -webkit-gradient(linear, left top, right top, color-stop(to, #378fe6));
-  background: linear-gradient(to right, #378fe6 to #3eda82);
+  background-color: linear-gradient(to right, #378fe6 to #3eda82);
 }
 
 header input:focus + .toggle-button {
@@ -186,7 +185,7 @@ header input:checked + .toggle-button:before {
           transform: translateX(20px);
 }
 
-header .theme-label {
+header .label {
   font-size: 0.7em;
   font-weight: 700;
   color: #1e202a;
