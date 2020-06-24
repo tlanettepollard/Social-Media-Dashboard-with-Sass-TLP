@@ -380,4 +380,54 @@ footer {
 .dark body body:before {
   background-color: #1f212e;
 }
+
+.dark .toggle-button {
+  background-color: linear-gradient(to right, #378fe6 to #3eda82);
+}
+
+.dark .toggle-button .toggle-button:before {
+  background-color: linear-gradient(to right, #378fe6 to #3eda82);
+}
+
+.dark .toggle-button input:checked + .toggle-button {
+  background-color: #aeb3cb;
+}
+
+.dark .toggle-button input:checked + .toggle-button:before {
+  background-color: #252a41;
+}
+
+.dark .toggle-button .label {
+  color: #8b97c6;
+}
+
+.dark .social__card,
+.dark .overview__card {
+  background-color: #252a41;
+}
+
+.dark .instagram-card {
+  background-color: #252a41;
+}
+
+.dark .instagram-card:hover {
+  background-color: #858cad;
+}
+
+.dark .card__count {
+  color: white;
+}
+
+.dark .card__description {
+  color: #8b97c6;
+}
+
+.dark .overview__title {
+  color: #8b97c6;
+}
+
+.dark .social__card:hover,
+.dark .overview__card:hover {
+  background-color: #858cad;
+}
 /*# sourceMappingURL=main.css.map */
