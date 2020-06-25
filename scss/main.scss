@@ -1,36 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
-// Variables 
-$white: #ffffff;
-$green-text: hsl(163, 72%, 41%);
-$red-text: hsl(356, 69%, 56%);
-$attribution: hsl(230, 20%, 60%);
-$attribution-link: hsl(228, 45%, 44%);
+    // Variables 
+    $white: #ffffff;
+    $green-text: hsl(163, 72%, 41%);
+    $red-text: hsl(356, 69%, 56%);
+    $attribution: hsl(230, 20%, 60%);
+    $attribution-link: hsl(228, 45%, 44%);
 
-//Social Color
-$facebook-border-color: hsl(208, 92%, 53%);
-$twitter-border-color: hsl(203, 89%, 53%);
-$instagram-border-color: linear-gradient(hsl(37, 97%, 70%) to hsl(329, 70%, 58%));
-$youtube-border-color: hsl(348, 97%, 39%);
+    //Social Color
+    $facebook-border-color: hsl(208, 92%, 53%);
+    $twitter-border-color: hsl(203, 89%, 53%);
+    $instagram-border-color: linear-gradient(hsl(37, 97%, 70%) to hsl(329, 70%, 58%));
+    $youtube-border-color: hsl(348, 97%, 39%);
 
-$dk-theme-toggle: linear-gradient(to right, hsl(210, 78%, 56%) to hsl(146, 68%, 55%));
-$lt-theme-toggle: hsl(230, 22%, 74%);
+    $dk-theme-toggle: linear-gradient(to right, hsl(210, 78%, 56%) to hsl(146, 68%, 55%));
+    $lt-theme-toggle: hsl(230, 22%, 74%);
 
-//Light Theme-- Default 
-$color-primary-lt-bg: hsl(0, 0%, 100%);
-$color-top-lt-bg: hsl(225, 100%, 98%);
-$color-card-lt-bg: hsl(227, 47%, 96%);
-$color-text-lt-primary: hsl(230, 17%, 14%);
-$color-text-lt-secondary: hsl(228, 12%, 44%);
-$color-lt-hover: hsl(231, 53%, 90%);
+    //Light Theme-- Default 
+    $color-primary-lt-bg: hsl(0, 0%, 100%);
+    $color-top-lt-bg: hsl(225, 100%, 98%);
+    $color-card-lt-bg: hsl(227, 47%, 96%);
+    $color-text-lt-primary: hsl(230, 17%, 14%);
+    $color-text-lt-secondary: hsl(228, 12%, 44%);
+    $color-lt-hover: hsl(231, 53%, 90%);
 
-//Dark Theme
-$color-primary-dk-bg: hsl(230, 17%, 14%);
-$color-top-dk-bg: hsl(232, 19%, 15%);
-$color-card-dk-bg: hsl(228, 28%, 20%);
-$color-text-dk-primary: hsl(0, 0%, 100%);
-$color-text-dk-secondary: hsl(228, 34%, 66%);
-$color-dk-hover: hsl(229, 20%, 60%);
+    //Dark Theme
+    $color-primary-dk-bg: hsl(230, 17%, 14%);
+    $color-top-dk-bg: hsl(232, 19%, 15%);
+    $color-card-dk-bg: hsl(228, 28%, 20%);
+    $color-text-dk-primary: hsl(0, 0%, 100%);
+    $color-text-dk-secondary: hsl(228, 34%, 66%);
+    $color-dk-hover: hsl(229, 20%, 60%);
+
+//Switched Mode
+[data-theme="dark"]{
+    --font-color-one: $color-text-dk-primary;
+    --font-color-two: $color-text-dk-secondary;
+    --bg-color: $color-primary-dk-bg;
+    --top-bg-color: $color-top-dk-bg;
+    --card-bg: $color-card-dk-bg;
+    --card-hover: $color-dk-hover;
+}
+
+// Default Theme 
+[data-theme="light"] {
+    --font-color-one: $color-text-lt-primary;
+    --font-color-two: $color-text-lt-secondary;
+    --bg-color: $color-primary-lt-bg;
+    --top-bg-color: $color-top-lt-bg;
+    --card-bg: $color-card-lt-bg;
+    --card-hover: $color-lt-hover;
+}
 
 
 * {
@@ -127,6 +147,8 @@ header {
         color: $color-text-lt-secondary;
         margin-top: -1em;
     }
+
+//Switch section
     .toggle {
         display: flex;
         align-items: center;
@@ -135,15 +157,16 @@ header {
         cursor: pointer;
         transition: all 0.3s ease;
     }
+
     .switch {
         position: relative;
         display: inline-block;
         height: 1.2em;
-        width: 2.65em;  
-        background-color: hsl(230, 22%, 74%);
-        border-radius: 50px;
-        
+        width: 2.65em;
+        background-color: $lt-theme-toggle;
+        border-radius: 50px;  
     }
+
     .switch input {
         display: none;
     }
@@ -155,41 +178,38 @@ header {
         right: 0;
         bottom: 0;
         border-radius: 34px;
-        background-color: hsl(230, 22%, 74%);
-        transition: all 0.3s ease;
+        background-color: hsl(230, 22%, 74%); 
     }
     .toggle-button:before {
         position: absolute;
-        content:"";
+        content: "";
         height: 20px;
         width: 20px;
         top: 0.07em;
         left: 0.4em;
         bottom: 0;
         margin: auto 0;
-        -webkit-transition: 0.4s;
         transition: 0.4s;
         box-shadow: 0 0px 15px hsl(230, 22%, 74%);
         background-color: $white;
         border-radius: 50%;
-    } 
-    
-    input:checked + .toggle-button {
-        background-color: $dk-theme-toggle;
     }
-    input:focus + .toggle-button{
+    input:checked + .toggle-button {
+        background-color: $lt-theme-toggle;
+    }
+    input:focus + .toggle-button {
         box-shadow: 0 0 1px hsl(225, 100%, 98%);
     }
-    input:checked + .toggle-button:before {
+    input:checked+.toggle-button:before {
         transform: translateX(20px);
     }
+
     .label {
         font-size: 0.7em;
         font-weight: 700;
         color: $color-text-lt-primary;
         margin-right: 1em;
     }
-
 }
 
 //First Dashboard Row
@@ -348,58 +368,3 @@ footer {
 .attribution a {
     color: $attribution-link;
 }
-
-//Dark Theme
-
-.dark {
-  body {
-      background-color: $color-primary-dk-bg;
-      color: $white;
-      body:before {
-        background-color: $color-top-dk-bg;
-      }
-  }
-  .toggle-button {
-      background-color: $dk-theme-toggle;
-      .toggle-button:before {
-          background-color: $dk-theme-toggle;
-      }
-      input:checked + .toggle-button {
-          background-color: $lt-theme-toggle; 
-      }
-      input:checked + .toggle-button:before {
-          background-color: $color-card-dk-bg;
-      }
-      .label {
-          color: $color-text-dk-secondary;
-      }
-  }
-  .social__card,
-  .overview__card {
-      background-color: $color-card-dk-bg;
-  }
-  .instagram-card {
-      background-color: $color-card-dk-bg;
-  }
-  .instagram-card:hover {
-      background-color: $color-dk-hover;
-  }
-  .card__count {
-      color: $color-text-dk-primary;
-  }
-  .card__description {
-      color: $color-text-dk-secondary;
-  }
-  .overview__title {
-      color: $color-text-dk-secondary;
-  }
-  .social__card:hover,
-  .overview__card:hover {
-      background-color: $color-dk-hover;
-  }
-
-   
-}
-
-
-//Media Queries
