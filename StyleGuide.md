@@ -121,3 +121,53 @@ Social Media Dashboard
   Total Views
   1407
   12%
+
+  .dark {
+  body {
+      background-color: $color-primary-dk-bg;
+      color: $white;
+      body:before {
+        background-color: $color-top-dk-bg;
+      }
+  }
+  .toggle-button {
+      background-color: $dk-theme-toggle;
+      .toggle-button:before {
+          background-color: $dk-theme-toggle;
+      }
+      input:checked + .toggle-button {
+          background-color: $lt-theme-toggle; 
+      }
+      input:checked + .toggle-button:before {
+          background-color: $color-card-dk-bg;
+      }
+      .label {
+          color: $color-text-dk-secondary;
+      }
+  }
+  .social__card,
+  .overview__card {
+      background-color: $color-card-dk-bg;
+  }
+  .instagram-card {
+      background-color: $color-card-dk-bg;
+  }
+  .instagram-card:hover {
+      background-color: $color-dk-hover;
+  }
+  .card__count {
+      color: $color-text-dk-primary;
+  }
+  .card__description {
+      color: $color-text-dk-secondary;
+  }
+  .overview__title {
+      color: $color-text-dk-secondary;
+  }
+  .social__card:hover,
+  .overview__card:hover {
+      background-color: $color-dk-hover;
+  }
+
+   
+}
