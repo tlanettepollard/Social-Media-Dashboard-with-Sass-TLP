@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
-[data-theme="dark"] {
+html[data-theme="dark"] {
   --font-color-one: $color-text-dk-primary;
   --font-color-two: $color-text-dk-secondary;
   --bg-color: $color-primary-dk-bg;
@@ -8,15 +8,14 @@
   --card-hover: $color-dk-hover;
 }
 
-[data-theme="light"] {
-  --font-color-one: $color-text-lt-primary;
-  --font-color-two: $color-text-lt-secondary;
-  --bg-color: $color-primary-lt-bg;
-  --top-bg-color: $color-top-lt-bg;
-  --card-bg: $color-card-lt-bg;
-  --card-hover: $color-lt-hover;
-}
-
+/*html[data-theme="light"] {
+    --font-color-one: $color-text-lt-primary;
+    --font-color-two: $color-text-lt-secondary;
+    --bg-color: $color-primary-lt-bg;
+    --top-bg-color: $color-top-lt-bg;
+    --card-bg: $color-card-lt-bg;
+    --card-hover: $color-lt-hover;
+}*/
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -146,20 +145,20 @@ header .toggle {
   transition: all 0.3s ease;
 }
 
-header .switch {
+header .toggle .switch {
   position: relative;
   display: inline-block;
-  height: 1.2em;
-  width: 2.65em;
+  height: 1.4em;
+  width: 3em;
   background-color: #aeb3cb;
   border-radius: 50px;
 }
 
-header .switch input {
+header .toggle .checkbox {
   display: none;
 }
 
-header .toggle-button {
+header .toggle .toggle-button {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -170,7 +169,7 @@ header .toggle-button {
   background-color: #aeb3cb;
 }
 
-header .toggle-button:before {
+header .toggle .toggle-button:before {
   position: absolute;
   content: "";
   height: 20px;
@@ -187,21 +186,21 @@ header .toggle-button:before {
   border-radius: 50%;
 }
 
-header input:checked + .toggle-button {
-  background-color: #aeb3cb;
+header .toggle input:checked + .toggle-button {
+  background-image: #aeb3cb;
 }
 
-header input:focus + .toggle-button {
+header .toggle input:focus + .toggle-button {
   -webkit-box-shadow: 0 0 1px #f5f7ff;
           box-shadow: 0 0 1px #f5f7ff;
 }
 
-header input:checked + .toggle-button:before {
+header .toggle input:checked + .toggle-button:before {
   -webkit-transform: translateX(20px);
           transform: translateX(20px);
 }
 
-header .label {
+header .toggle .header__p {
   font-size: 0.7em;
   font-weight: 700;
   color: #1e202a;

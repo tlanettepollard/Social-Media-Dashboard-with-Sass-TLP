@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
     // Variables 
+
     $white: #ffffff;
     $green-text: hsl(163, 72%, 41%);
     $red-text: hsl(356, 69%, 56%);
@@ -10,10 +11,10 @@
     //Social Color
     $facebook-border-color: hsl(208, 92%, 53%);
     $twitter-border-color: hsl(203, 89%, 53%);
-    $instagram-border-color: linear-gradient(hsl(37, 97%, 70%) to hsl(329, 70%, 58%));
+    $instagram-border-color: linear-gradient (to top right,hsl(37, 97%, 70%), hsl(329, 70%, 58%));
     $youtube-border-color: hsl(348, 97%, 39%);
 
-    $dk-theme-toggle: linear-gradient(to right, hsl(210, 78%, 56%) to hsl(146, 68%, 55%));
+    $dk-theme-toggle: linear-gradient(to top right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
     $lt-theme-toggle: hsl(230, 22%, 74%);
 
     //Light Theme-- Default 
@@ -33,7 +34,7 @@
     $color-dk-hover: hsl(229, 20%, 60%);
 
 //Switched Mode
-[data-theme="dark"]{
+html[data-theme="dark"] {
     --font-color-one: $color-text-dk-primary;
     --font-color-two: $color-text-dk-secondary;
     --bg-color: $color-primary-dk-bg;
@@ -43,14 +44,14 @@
 }
 
 // Default Theme 
-[data-theme="light"] {
+/*html[data-theme="light"] {
     --font-color-one: $color-text-lt-primary;
     --font-color-two: $color-text-lt-secondary;
     --bg-color: $color-primary-lt-bg;
     --top-bg-color: $color-top-lt-bg;
     --card-bg: $color-card-lt-bg;
     --card-hover: $color-lt-hover;
-}
+}*/
 
 
 * {
@@ -148,68 +149,66 @@ header {
         margin-top: -1em;
     }
 
-//Switch section
-    .toggle {
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-        justify-content: center;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
-
-    .switch {
-        position: relative;
-        display: inline-block;
-        height: 1.2em;
-        width: 2.65em;
-        background-color: $lt-theme-toggle;
-        border-radius: 50px;  
-    }
-
-    .switch input {
-        display: none;
-    }
-    .toggle-button {
-        position: absolute;
-        cursor: pointer;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        border-radius: 34px;
-        background-color: hsl(230, 22%, 74%); 
-    }
-    .toggle-button:before {
-        position: absolute;
-        content: "";
-        height: 20px;
-        width: 20px;
-        top: 0.07em;
-        left: 0.4em;
-        bottom: 0;
-        margin: auto 0;
-        transition: 0.4s;
-        box-shadow: 0 0px 15px hsl(230, 22%, 74%);
-        background-color: $white;
-        border-radius: 50%;
-    }
-    input:checked + .toggle-button {
-        background-color: $lt-theme-toggle;
-    }
-    input:focus + .toggle-button {
-        box-shadow: 0 0 1px hsl(225, 100%, 98%);
-    }
-    input:checked+.toggle-button:before {
-        transform: translateX(20px);
-    }
-
-    .label {
-        font-size: 0.7em;
-        font-weight: 700;
-        color: $color-text-lt-primary;
-        margin-right: 1em;
-    }
+//Switch/Toggle section
+   .toggle {
+       display: flex;
+       align-items: center;
+       flex-direction: row;
+       justify-content: center;
+       cursor: pointer;
+       transition: all 0.3s ease;
+       
+       .switch {
+           position: relative;
+           display: inline-block;
+           height: 1.4em;
+           width: 3em;
+           background-color: $lt-theme-toggle;
+           border-radius: 50px;
+       }
+       .checkbox {
+           display: none;
+       }
+       .toggle-button {
+           position: absolute;
+           cursor: pointer;
+           top: 0;
+           left: 0;
+           right: 0;
+           bottom: 0;
+           border-radius: 34px;
+           background-color: hsl(230, 22%, 74%);
+       }
+       .toggle-button:before {
+           position: absolute;
+           content: "";
+           height: 20px;
+           width: 20px;
+           top: 0.07em;
+           left: 0.4em;
+           bottom: 0;
+           margin: auto 0;
+           transition: 0.4s;
+           box-shadow: 0 0px 15px hsl(230, 22%, 74%);
+           background-color: $white;
+           border-radius: 50%;
+       }
+       input:checked + .toggle-button {
+           background-image: $lt-theme-toggle;
+       }
+       input:focus + .toggle-button {
+           box-shadow: 0 0 1px hsl(225, 100%, 98%);
+       }
+       input:checked + .toggle-button:before {
+           transform: translateX(20px);
+       }
+       .header__p {
+           font-size: 0.7em;
+           font-weight: 700;
+           color: $color-text-lt-primary;
+           margin-right: 1em;
+       }
+   }
 }
 
 //First Dashboard Row
