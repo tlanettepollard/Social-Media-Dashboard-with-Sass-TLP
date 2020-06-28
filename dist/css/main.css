@@ -346,4 +346,28 @@ footer {
 .attribution a {
   color: #3e52a3;
 }
+
+@media (max-width: 650px) {
+  .header__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .dashboard__title {
+    border-bottom: 1px solid #63687e;
+    padding-bottom: 1rem;
+    width: 100%;
+  }
+  .toggle-switch {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 1rem;
+  }
+}
 /*# sourceMappingURL=main.css.map */
