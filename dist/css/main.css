@@ -1,4 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+.dark {
+  --bg: hsl(230, 17%, 14%);
+  --top-bg: hsl(232, 19%, 15%);
+  --card-bg: hsl(228, 28%, 20%);
+  --title-text: hsl(0, 0%, 100%);
+  --body-text: hsl(228, 34%, 66%);
+  --card-bg-hover: hsl(229, 20%, 60%);
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
