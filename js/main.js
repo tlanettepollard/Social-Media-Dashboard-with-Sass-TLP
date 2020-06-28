@@ -1,21 +1,20 @@
 //Toggle Switch
+// DOM Elements 
+const themeToggle = document.getElementById('toggle');
+const body = document.body;
 
-const checkbox = document.querySelector(".checkbox");
-console.log(checkbox);
+//Apply the cached theme on reload 
 
-checkbox.addEventListener("change", function () {
-    if (this.checked) {
-        transition();
-        document.documentElement.setAttribute("data-theme", "light");
-    } else {
-        transition();
-        document.documentElement.setAttribute("data-theme", "dark");
-    }
-});
+const theme = localStorage.getItem('theme');
+const isDark = localStorage.getItem('isDark');
 
-const transition = () => {
-    document.documentElement.classList.add("transition");
-    window.setTimeout(() => {
-        document.documentElement.classList.remove("transition");
-    }, 1000);
+if (theme) {
+    body.classList.add(theme);
+    isDark && body.classList.add('dark');
+}
+
+//Button Event Handler
+themeToggle.onclick = () => {
+    body.classList.replace('light', 'dark');
+    localStorage.setItem('theme', 'dark');
 };

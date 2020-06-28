@@ -126,7 +126,7 @@ header .theme {
   margin-top: -1em;
 }
 
-header .toggle {
+header .toggle-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -145,7 +145,7 @@ header .toggle {
   transition: all 0.3s ease;
 }
 
-header .toggle .switch {
+header .toggle-container .switch {
   position: relative;
   display: inline-block;
   height: 1.4em;
@@ -154,11 +154,11 @@ header .toggle .switch {
   border-radius: 50px;
 }
 
-header .toggle .checkbox {
+header .toggle-container .checkbox {
   display: none;
 }
 
-header .toggle .toggle-button {
+header .toggle-container .toggle-button {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -169,7 +169,7 @@ header .toggle .toggle-button {
   background-color: #aeb3cb;
 }
 
-header .toggle .toggle-button:before {
+header .toggle-container .toggle-button:before {
   position: absolute;
   content: "";
   height: 20px;
@@ -186,21 +186,25 @@ header .toggle .toggle-button:before {
   border-radius: 50%;
 }
 
-header .toggle input:checked + .toggle-button {
+header .toggle-container .toggle-button:hover:after {
+  background-color: linear-gradient(to top right, #378fe6, #3eda82);
+}
+
+header .toggle-container input:checked + .toggle-button {
   background-image: #aeb3cb;
 }
 
-header .toggle input:focus + .toggle-button {
+header .toggle-container input:focus + .toggle-button {
   -webkit-box-shadow: 0 0 1px #f5f7ff;
           box-shadow: 0 0 1px #f5f7ff;
 }
 
-header .toggle input:checked + .toggle-button:before {
+header .toggle-container input:checked + .toggle-button:before {
   -webkit-transform: translateX(20px);
           transform: translateX(20px);
 }
 
-header .toggle .header__p {
+header .toggle-container .header__p {
   font-size: 0.7em;
   font-weight: 700;
   color: #1e202a;

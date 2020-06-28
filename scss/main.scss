@@ -68,6 +68,7 @@ html {
 
 }
 
+
 body {
     margin: 0;
     background-color: $color-primary-lt-bg;
@@ -150,7 +151,7 @@ header {
     }
 
 //Switch/Toggle section
-   .toggle {
+   .toggle-container {
        display: flex;
        align-items: center;
        flex-direction: row;
@@ -193,9 +194,14 @@ header {
            background-color: $white;
            border-radius: 50%;
        }
+       .toggle-button:hover:after {
+           background-color: $dk-theme-toggle;
+       }
+
        input:checked + .toggle-button {
            background-image: $lt-theme-toggle;
        }
+
        input:focus + .toggle-button {
            box-shadow: 0 0 1px hsl(225, 100%, 98%);
        }
