@@ -1,21 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
-html[data-theme="dark"] {
-  --font-color-one: $color-text-dk-primary;
-  --font-color-two: $color-text-dk-secondary;
-  --bg-color: $color-primary-dk-bg;
-  --top-bg-color: $color-top-dk-bg;
-  --card-bg: $color-card-dk-bg;
-  --card-hover: $color-dk-hover;
-}
-
-/*html[data-theme="light"] {
-    --font-color-one: $color-text-lt-primary;
-    --font-color-two: $color-text-lt-secondary;
-    --bg-color: $color-primary-lt-bg;
-    --top-bg-color: $color-top-lt-bg;
-    --card-bg: $color-card-lt-bg;
-    --card-hover: $color-lt-hover;
-}*/
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -36,7 +19,7 @@ body {
   background-color: white;
 }
 
-body:before {
+body::before {
   content: "";
   position: absolute;
   top: 0;
@@ -126,89 +109,62 @@ header .theme {
   margin-top: -1em;
 }
 
-header .toggle-container {
+header .toggle-switch {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  cursor: pointer;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
 }
 
-header .toggle-container .switch {
-  position: relative;
-  display: inline-block;
-  height: 1.4em;
-  width: 3em;
-  background-color: #aeb3cb;
-  border-radius: 50px;
+header .toggle-switch > span {
+  font-weight: 700;
+  padding-right: 1rem;
+  font-size: 0.7em;
+  color: #1e202a;
 }
 
-header .toggle-container .checkbox {
+header .dark-theme-toggle {
   display: none;
 }
 
-header .toggle-container .toggle-button {
-  position: absolute;
+header .dark-theme-label {
+  height: 1.5rem;
+  width: 3rem;
+  border-radius: 0.75rem;
+  background: #aeb3cb;
+  position: relative;
   cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 34px;
-  background-color: #aeb3cb;
+  -webkit-transition: none;
+  transition: none;
 }
 
-header .toggle-container .toggle-button:before {
+header .dark-theme-label span {
+  height: 1rem;
+  width: 1rem;
+  border-radius: 0.75rem;
   position: absolute;
-  content: "";
-  height: 20px;
-  width: 20px;
-  top: 0.07em;
-  left: 0.4em;
-  bottom: 0;
-  margin: auto 0;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-  -webkit-box-shadow: 0 0px 15px #aeb3cb;
-          box-shadow: 0 0px 15px #aeb3cb;
-  background-color: #ffffff;
-  border-radius: 50%;
+  right: 0.25rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: white;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
-header .toggle-container .toggle-button:hover:after {
-  background-color: linear-gradient(to top right, #378fe6, #3eda82);
+header .dark-theme-label:hover,
+header .dark-theme-toggle:checked {
+  background: -webkit-gradient(linear, left top, right top, from(#378fe6), to(#3eda82));
+  background: linear-gradient(to right, #378fe6, #3eda82);
 }
 
-header .toggle-container input:checked + .toggle-button {
-  background-image: #aeb3cb;
-}
-
-header .toggle-container input:focus + .toggle-button {
-  -webkit-box-shadow: 0 0 1px #f5f7ff;
-          box-shadow: 0 0 1px #f5f7ff;
-}
-
-header .toggle-container input:checked + .toggle-button:before {
-  -webkit-transform: translateX(20px);
-          transform: translateX(20px);
-}
-
-header .toggle-container .header__p {
-  font-size: 0.7em;
-  font-weight: 700;
-  color: #1e202a;
-  margin-right: 1em;
+header .dark-theme-toggle:checked ~ .dark-theme-label span {
+  -webkit-transform: translate(-1.5rem, -50%);
+          transform: translate(-1.5rem, -50%);
 }
 
 .first__dashboard-container {
