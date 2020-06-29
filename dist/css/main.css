@@ -1,11 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
-.dark {
+html[data-theme="dark"] {
   --bg: hsl(230, 17%, 14%);
   --top-bg: hsl(232, 19%, 15%);
   --card-bg: hsl(228, 28%, 20%);
   --title-text: hsl(0, 0%, 100%);
   --body-text: hsl(228, 34%, 66%);
-  --card-bg-hover: hsl(229, 20%, 60%);
+  --card-bg-hover: hsl(228, 28%, 30%);
+  --toggle: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  --hover-toggle: hsl(228, 28%, 30%);
 }
 
 * {
@@ -118,63 +120,7 @@ header .theme {
   margin-top: -1em;
 }
 
-header .toggle-switch {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
 
-header .toggle-switch > span {
-  font-weight: 700;
-  padding-right: 1rem;
-  font-size: 0.7em;
-  color: #1e202a;
-}
-
-header .dark-theme-toggle {
-  display: none;
-}
-
-header .dark-theme-label {
-  height: 1.5rem;
-  width: 3rem;
-  border-radius: 0.75rem;
-  background: #aeb3cb;
-  position: relative;
-  cursor: pointer;
-  -webkit-transition: none;
-  transition: none;
-}
-
-header .dark-theme-label span {
-  height: 1rem;
-  width: 1rem;
-  border-radius: 0.75rem;
-  position: absolute;
-  right: 0.25rem;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  background-color: white;
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-  transition: -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-}
-
-header .dark-theme-label:hover,
-header .dark-theme-toggle:checked {
-  background: -webkit-gradient(linear, left top, right top, from(#378fe6), to(#3eda82));
-  background: linear-gradient(to right, #378fe6, #3eda82);
-}
-
-header .dark-theme-toggle:checked ~ .dark-theme-label span {
-  -webkit-transform: translate(-1.5rem, -50%);
-          transform: translate(-1.5rem, -50%);
-}
 
 .first__dashboard-container {
   display: -ms-grid;
@@ -199,7 +145,7 @@ header .dark-theme-toggle:checked ~ .dark-theme-label span {
 }
 
 .first__dashboard-container .social__card:hover {
-  background-color: #d8dcf3;
+  background-color: #e0e2eb;
 }
 
 .first__dashboard-container .facebook-card {
@@ -309,7 +255,7 @@ header .dark-theme-toggle:checked ~ .dark-theme-label span {
 }
 
 .second__dashboard-container .overview__card:hover {
-  background-color: #d8dcf3;
+  background-color: #e0e2eb;
 }
 
 .second__dashboard-container .overview-icon,
