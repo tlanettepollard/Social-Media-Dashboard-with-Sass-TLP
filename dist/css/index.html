@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,26 +9,28 @@
 <body> 
     <div class="container">
       <header class="header">
-          <div class="header__container">
-              <div>
-                  <h1 class="dashboard__title">
-                      Social Media Dashboard
-                  </h1>
-                  <p class="followers">
-                      Total Followers: 23,004
-                  </p>
-              </div>
+        <div class="header__container">
+            <div>
+                <h1 class="dashboard__title">
+                    Social Media Dashboard
+                </h1>
+                <p class="followers">
+                    Total Followers: 23,004
+                </p>
+            </div>
               <!--.dashboard__title-->
 
-            <div class="toggle-switch">
-                <span>Dark Mode</span>
-                <input type="checkbox" class="checkbox" id="toggle">
-                <label class="toggle-label" for="toggle">
-                    <span></span>
-                </label>
+            <div class="toggle">
+                <span class="toggle-label">Dark Mode</span>
+                <span class="toggle-switch">
+                    <label>
+                        <input name="themeToggler" type="checkbox" id="themeToggler" onclick="themeToggle()" />
+                        <span class="slider round"></span>
+                    </label>
+                </span> 
             </div>
               <!--.toggle-wrapper-->
-          </div>
+        </div>
           <!--.header__container-->
       </header>
 

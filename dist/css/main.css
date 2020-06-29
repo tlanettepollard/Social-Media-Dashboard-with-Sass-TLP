@@ -1,15 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
-html[data-theme="dark"] {
-  --bg: hsl(230, 17%, 14%);
-  --top-bg: hsl(232, 19%, 15%);
-  --card-bg: hsl(228, 28%, 20%);
-  --title-text: hsl(0, 0%, 100%);
-  --body-text: hsl(228, 34%, 66%);
-  --card-bg-hover: hsl(228, 28%, 30%);
-  --toggle: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
-  --hover-toggle: hsl(228, 28%, 30%);
-}
-
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -120,7 +109,32 @@ header .theme {
   margin-top: -1em;
 }
 
+header .toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 
+header .toggle-label {
+  color: #63687e;
+  font-weight: 700;
+  font-size: 0.7em;
+  margin-right: 3em;
+}
+
+header .toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+header input {
+  visibility: hidden;
+}
 
 .first__dashboard-container {
   display: -ms-grid;
