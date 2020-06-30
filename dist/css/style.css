@@ -5,4 +5,9 @@
 @use '../scss/base/reset';
 /* Blocks */
 @use '../scss/blocks/body';
+@use '../scss/blocks/card';
+@use '../scss/blocks/container';
+@use '../scss/blocks/header';
+@use '../scss/blocks/main';
+@use '../scss/blocks/toggle';
 /*# sourceMappingURL=style.css.map */
