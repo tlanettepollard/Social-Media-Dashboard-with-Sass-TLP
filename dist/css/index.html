@@ -20,23 +20,19 @@
             </div>
               <!--.dashboard__title-->
 
-            <div class="toggle">
-                <span class="toggle-label">Dark Mode</span>
-                <span class="toggle-switch">
-                    <label>
-                        <input name="themeToggler" type="checkbox" id="themeToggler" onclick="themeToggle()" />
-                        <span class="slider round"></span>
-                    </label>
-                </span> 
-            </div>
-              <!--.toggle-wrapper-->
+            <div class="switch-wrapper">
+                <div class="switch-label">Dark Mode</div>
+                <div class="switch-toggle">
+                    <div class="switch-toggle-btn"></div>
+                </div> <!--.switch-toggle-->
+            </div> <!--.switch-wrapper-->
         </div>
           <!--.header__container-->
       </header>
-
+      
+      <main class="main">
       <!--First Dashboard Section-->
       <div class="first__dashboard-container">
-
           <!-- Facebook -->
           <div class="social__card facebook-card">
               <div class="card__heading">
@@ -271,10 +267,9 @@
           <!--.overview__card-->
       </div>
       <!--.second__dashboard-container-->
-  </div>
-  <!--.container-->
 
-  <footer class="footer__container">
+    </div><!--.container-->
+    <footer class="footer__container">
       <div class="attribution">
           Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
           Coded by <a href="#">T.Lanette Pollard</a>.
