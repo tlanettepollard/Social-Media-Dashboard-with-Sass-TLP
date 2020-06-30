@@ -1,23 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  outline: 1px solid black;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-html {
-  font-size: 125%;
-  font-weight: 500;
-  line-height: 1.4;
-  font-family: "Inter", sans-serif;
-}
-
-body {
-  margin: 0;
-  background-color: white;
-  -webkit-transition: all 0.5 ease;
-  transition: all 0.5 ease;
-}
+/* Utilities */
+@use '/scss/utilities/variables';
+/* Base */
+@use '/scss/base/typography';
+@use '/scss/base/reset';
 /*# sourceMappingURL=main.css.map */

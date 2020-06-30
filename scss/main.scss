@@ -1,65 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-
-    // Variables 
-
-    $white: #ffffff;
-    $green-text: hsl(163, 72%, 41%);
-    $red-text: hsl(356, 69%, 56%);
-    $attribution: hsl(230, 20%, 60%);
-    $attribution-link: hsl(228, 45%, 44%);
-
-    //Social Color
-    $facebook-border-color: hsl(208, 92%, 53%);
-    $twitter-border-color: hsl(203, 89%, 53%);
-    $instagram-border-color: linear-gradient (to top right,hsl(37, 97%, 70%), hsl(329, 70%, 58%));
-    $youtube-border-color: hsl(348, 97%, 39%);
-
-    $hover-toggle: hsl(227, 47%, 96%);
-    $toggle: hsl(230, 22%, 74%);
-
-    //Light Theme-- Default 
-    $bg-light-mode: hsl(0, 0%, 100%);
-    $top-bg-light-mode: hsl(225, 100%, 98%);
-    $card-light-mode: hsl(227, 47%, 96%);
-    $title-text-light-mode: hsl(230, 17%, 14%);
-    $body-text-light-mode: hsl(228, 12%, 44%);
-    $card-hover-light-mode: hsl(230,22%, 90%);
-
-    $toggle-bg: linear-gradient(to right,
-        hsl(210, 78%, 56%),
-        hsl(146, 68%, 55%));
+/* Utilities */
+@use '/scss/utilities/variables';
 
 
-    //Switched Mode
-    //Dark Theme
-    $bg-dark-mode: hsl(230, 17%, 14%);
-    $top-bg-dark-mode: hsl(232, 19%, 15%);
-    $card-dark-mode: hsl(228, 28%, 20%);
-    $title-text-dark-mode: hsl(0, 0%, 100%);
-    $body-text-dark-mode: hsl(228, 34%, 66%);
-    $card-hover-dark-mode: hsl(228, 28%, 30%);
+/* Base */
+@use '/scss/base/typography';
+@use '/scss/base/reset';
 
 
 
-* {
-    box-sizing: border-box;
-    outline: 1px solid black;
-    transition: all 0.3s ease-in-out;
-}
-
-html {
-    font-size: 125%;
-    font-weight: 500;
-    line-height: 1.4;
-    font-family: "Inter", sans-serif;
-
-}
 
 
-body {
-    margin: 0;
-    background-color: $bg-light-mode;
-    transition: all 0.5 ease;
-}
+
+
 
 

@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 1px solid black;
+}
+
+html.transition,
+html.transition *,
+html.transition *::before,
+html.transtion *::after {
+    transition: all 750ms !important;
+    transition-delay: 0 !important;
+}
