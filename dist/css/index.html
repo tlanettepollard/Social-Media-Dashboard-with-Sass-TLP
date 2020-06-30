@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,32 +9,30 @@
 <body> 
     <div class="container">
       <header class="header">
-          <div class="header__container">
-              <div>
-                  <h1 class="dashboard__title">
-                      Social Media Dashboard
-                  </h1>
-                  <p class="followers">
-                      Total Followers: 23,004
-                  </p>
-              </div>
+        <div class="header__container">
+            <div>
+                <h1 class="dashboard__title">
+                    Social Media Dashboard
+                </h1>
+                <p class="followers">
+                    Total Followers: 23,004
+                </p>
+            </div>
               <!--.dashboard__title-->
 
-            <div class="toggle-switch">
-                <span>Dark Mode</span>
-                <input type="checkbox" class="checkbox" id="toggle">
-                <label class="toggle-label" for="toggle">
-                    <span></span>
-                </label>
-            </div>
-              <!--.toggle-wrapper-->
-          </div>
+            <div class="switch-wrapper">
+                <div class="switch-label">Dark Mode</div>
+                <div class="switch-toggle">
+                    <div class="switch-toggle-btn"></div>
+                </div> <!--.switch-toggle-->
+            </div> <!--.switch-wrapper-->
+        </div>
           <!--.header__container-->
       </header>
-
+      
+      <main class="main">
       <!--First Dashboard Section-->
       <div class="first__dashboard-container">
-
           <!-- Facebook -->
           <div class="social__card facebook-card">
               <div class="card__heading">
@@ -269,10 +267,9 @@
           <!--.overview__card-->
       </div>
       <!--.second__dashboard-container-->
-  </div>
-  <!--.container-->
 
-  <footer class="footer__container">
+    </div><!--.container-->
+    <footer class="footer__container">
       <div class="attribution">
           Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
           Coded by <a href="#">T.Lanette Pollard</a>.

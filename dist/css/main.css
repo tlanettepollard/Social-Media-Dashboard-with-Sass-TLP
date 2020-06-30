@@ -1,15 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
-html[data-theme="dark"] {
-  --bg: hsl(230, 17%, 14%);
-  --top-bg: hsl(232, 19%, 15%);
-  --card-bg: hsl(228, 28%, 20%);
-  --title-text: hsl(0, 0%, 100%);
-  --body-text: hsl(228, 34%, 66%);
-  --card-bg-hover: hsl(228, 28%, 30%);
-  --toggle: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
-  --hover-toggle: hsl(228, 28%, 30%);
-}
-
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -28,6 +17,8 @@ html {
 body {
   margin: 0;
   background-color: white;
+  -webkit-transition: all 0.5 ease;
+  transition: all 0.5 ease;
 }
 
 body::before {
@@ -120,7 +111,66 @@ header .theme {
   margin-top: -1em;
 }
 
+header .switch-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
 
+header .switch-label {
+  font-family: inherit;
+  font-size: 0.7rem;
+  font-weight: 700;
+  margin-right: 1rem;
+  color: #63687e;
+}
+
+header .switch-toggle {
+  position: relative;
+  color: #ffffff;
+  width: 60px;
+  height: 25px;
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  background: #aeb3cb;
+}
+
+header .switch-toggle-btn {
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background: #ffffff;
+  -webkit-transform: translateX(32px);
+          transform: translateX(32px);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+header .switch-wrapper:hover .switch-label {
+  color: #1e202a;
+}
+
+header .switch-wrapper:hover .switch-toggle {
+  background: -webkit-gradient(linear, left top, right top, from(#378fe6), to(#3eda82));
+  background: linear-gradient(to right, #378fe6, #3eda82);
+}
 
 .first__dashboard-container {
   display: -ms-grid;
