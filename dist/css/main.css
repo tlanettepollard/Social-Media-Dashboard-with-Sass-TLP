@@ -3,4 +3,6 @@
 /* Base */
 @use '/scss/base/typography';
 @use '/scss/base/reset';
+/* Blocks */
+@use '/scss/blocks/body';
 /*# sourceMappingURL=main.css.map */
