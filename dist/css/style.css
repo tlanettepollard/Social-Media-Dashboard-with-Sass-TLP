@@ -1,5 +1,5 @@
 /* Utilities */
-@use '../scss/utilities/variables';
+@use '/scss/utilities/variables';
 /* Base */
 @use '../scss/base/typography';
 @use '../scss/base/reset';
