@@ -104,6 +104,12 @@ html {
   text-align: left;
 }
 
+.overview__text {
+  color: var(--body-text);
+  font-size: 0.7em;
+  font-weight: 700;
+}
+
 .overview__followers {
   color: var(--color-text);
   line-height: 1;
@@ -113,6 +119,21 @@ html {
 
 .overview__stats {
   text-align: right;
+}
+
+.social-stats span {
+  font-size: 0.6em;
+  font-weight: 700;
+}
+
+.attribution {
+  font-size: 1em;
+  text-align: center;
+  color: var(--attribution);
+}
+
+.attribution a {
+  color: var(--attribution-link);
 }
 
 @media (min-width: 1200px) {
@@ -200,10 +221,6 @@ body {
   margin-top: 0.5rem;
 }
 
-.social-icon {
-  margin-right: 1em;
-}
-
 .up-icon {
   position: relative;
   top: -0.2rem;
@@ -253,6 +270,48 @@ body {
 .card:hover,
 .overview__card:hover {
   background-color: var(--hover);
+}
+
+.overview__card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  padding: 1.5em;
+  margin-bottom: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+  background-color: var(--card-bg);
+  -webkit-transition: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
+}
+
+.overview__followers {
+  padding-top: 1em;
+}
+
+.overview-icon,
+.social-stats {
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+.social-stats {
+  padding-top: 2.1em;
+}
+
+.social-stats span {
+  padding-left: 0.3em;
+}
+
+@media (min-width: 600px) {
+  .card {
+    width: 100%;
+    max-width: 16rem;
+    margin: 0;
+  }
 }
 
 .container {
@@ -335,14 +394,14 @@ body {
 }
 
 .overview__title {
-  padding: 4.5% 6.5%;
+  padding: 2em 3em;
 }
 
 @media (min-width: 600px) {
   .overview__title {
     width: 33.8rem;
     margin: auto;
-    padding: 4.5% 0;
+    padding: 1.5% 0;
   }
   .main__container {
     display: -ms-grid;
@@ -358,6 +417,7 @@ body {
     -webkit-column-gap: 1.8rem;
             column-gap: 1.8rem;
     margin-bottom: 2.666em;
+    padding-top: 0.5em;
   }
 }
 
@@ -431,5 +491,19 @@ body {
 
 .toggle-switch:active::after {
   width: 1.5em;
+}
+
+footer {
+  margin-top: 100px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100px;
+}
+
+/* Attribution */
+.attribution {
+  margin: auto;
+  opacity: 80%;
 }
 /*# sourceMappingURL=style.css.map */
