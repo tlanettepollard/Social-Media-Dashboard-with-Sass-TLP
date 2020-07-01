@@ -65,6 +65,11 @@ html {
     &__card {
         text-align: left;
     }
+    &__text {
+       color: var(--body-text);
+       font-size: 0.7em;
+       font-weight: 700;
+    }
     &__followers {
         color: var(--color-text);
         line-height: 1;
@@ -76,11 +81,45 @@ html {
     }
 }
 
+.social-stats span {
+   font-size: 0.6em;
+   font-weight: 700;
+}
+
+.attribution {
+    font-size: 1em;
+    text-align: center;
+    color: var(--attribution);
+}
+
+.attribution a {
+    color: var(--attribution-link);
+}
+
+
 @include screen-l {
     .header {
         &__title {
             font-size: 1.65rem;
             letter-spacing: 0.8px;
         }
+    }
+}
+
+@include screen-m {
+    .attribution   {
+        font-size: 0.65em;
+    }
+}
+
+@include screen-s {
+    .attribution {
+        font-size: 0.60em;
+    }
+}
+
+@include screen-l {
+    .attribution {
+        font-size: 1em;
     }
 }

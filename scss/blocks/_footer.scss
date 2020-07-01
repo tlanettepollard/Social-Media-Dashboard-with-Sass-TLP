@@ -1,0 +1,33 @@
+footer {
+    margin-top: 100px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100px;
+}
+
+/* Attribution */
+.attribution {
+    margin: auto;
+    opacity: 80%;
+}
+
+@include screen-m {
+    footer {
+        .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        }
+    }
+}
+
+@include screen-s {
+    footer {
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+}

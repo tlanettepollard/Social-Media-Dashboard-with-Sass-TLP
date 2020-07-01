@@ -6,11 +6,14 @@
     justify-content: center;
     background-color: var(--card-bg);
     width: 87%;
+    height: 235px;
     max-width: 20.5rem;
     margin: auto;
     padding: 1.5em 0;
     margin-bottom: 1.7em;
-    border-radius: 0 0 0.33em 0.33em;
+    border-top-style: solid;
+    border-top-width: 4px;
+    border-radius: 5px;
     transition: background-color 300ms ease-out;
     &__heading {
         display: flex;
@@ -32,9 +35,6 @@
     }
 }
 
-.social-icon {
-    margin-right: 1em;
-}
 .up-icon {
     position: relative;
     top: -0.2rem;
@@ -49,19 +49,91 @@
     margin-left: 0.3rem;
 }
 
-.facebook-card::after,
-.twitter-card::after, 
-.instagram-card::after,
-.youtube::after {
-    position: absolute;
-    top: -4px;
-    bottom: 0px;
-    right: 0px;
-    content: "";
-    z-index: -1;
-    border-radius: 0.333em;
+.facebook-card {
+    border-top-color: var(--facebook-border);
 }
 
-.facebook-card::after {
-    background: var(--facebook-border);
+.twitter-card {
+    border-top-color: var(--twitter-border);
 }
+
+.youtube-card {
+    border-top-color: var(--youtube-border);
+}
+
+.instagram-card {
+    border-top: 0.25em solid transparent;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: 
+        linear-gradient(to right, hsl(227, 47%, 96%), hsl(227, 47%, 96%)),
+        linear-gradient(90deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+    background-clip: padding-box,
+    border-box;
+    background-origin: padding-box,
+    border-box;
+}
+.instagram-card:hover {
+    border-top: 0.25em solid transparent;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: linear-gradient(hsl(231, 53%, 90%),
+        hsl(231, 53%, 90%)),
+    linear-gradient(90deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+    background-clip: padding-box,
+    border-box;
+    background-origin: padding-box,
+    border-box;
+}
+
+
+.card:hover,
+.overview__card:hover {
+    background-color: var(--hover);
+}
+
+.overview__card {
+  position: relative;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 1.5em;
+  margin-bottom: 1rem;
+  align-items: center;
+  border-radius: 5px;
+  background-color: var(--card-bg);  
+  transition: ease-in-out 0.2s;
+}
+
+.overview__followers {
+    padding-top: 1em;
+}
+
+.overview-icon,
+.social-stats {
+    justify-self: end;
+}
+
+.social-stats {
+    padding-top: 2.1em;
+}
+
+.social-stats span {
+    padding-left: 0.3em;
+}
+
+@include screen-m {
+    .card {
+        width: 100%;
+        max-width: 16rem;
+        margin: 0;
+    }
+    .overview__card {
+        width: 100%;
+        max-width: 16rem;
+        margin: 0;
+    }
+    
+}
+
+
