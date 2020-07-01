@@ -3,6 +3,84 @@
 html {
     font-size: 125%;
     font-weight: 500;
-    line-height: 1.4;
+    line-height: 1.6;
     font-family: "Inter", sans-serif;
+}
+
+.header {
+    &__title {
+        font-size: 1.4rem;
+        letter-spacing: 0.8px;
+        color: var(--color-text);
+    }
+    &__text {
+        letter-spacing: 0.8px;
+        color: var(--body-text);
+        font-weight: 700;
+        font-size: 0.8rem;
+    }
+}
+
+.card {
+    text-align: center;
+
+    &__heading {
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: var(--body-text);
+    }
+    &__count {
+        color: var(--color-text);
+        font-size: 3.333rem;
+        font-weight: 700;
+    }
+    &__description {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-weight: 400;
+        color: var(--body-text);
+    }
+}
+
+.green-text {
+    color: var(--green-text);
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+.red-text {
+    color: var(--red-text);
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+.overview {
+    &__title {
+        font-size: 1.3rem;
+        letter-spacing: 0.8px;
+        color: var(--body-text);
+    }
+
+    &__card {
+        text-align: left;
+    }
+    &__followers {
+        color: var(--color-text);
+        line-height: 1;
+        font-size: 2rem;
+        font-weight: 700;
+    }
+    &__stats {
+        text-align: right;
+    }
+}
+
+@include screen-l {
+    .header {
+        &__title {
+            font-size: 1.65rem;
+            letter-spacing: 0.8px;
+        }
+    }
 }

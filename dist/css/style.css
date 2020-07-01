@@ -41,8 +41,85 @@ html[data-theme="dark"] {
 html {
   font-size: 125%;
   font-weight: 500;
-  line-height: 1.4;
+  line-height: 1.6;
   font-family: "Inter", sans-serif;
+}
+
+.header__title {
+  font-size: 1.4rem;
+  letter-spacing: 0.8px;
+  color: var(--color-text);
+}
+
+.header__text {
+  letter-spacing: 0.8px;
+  color: var(--body-text);
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.card {
+  text-align: center;
+}
+
+.card__heading {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--body-text);
+}
+
+.card__count {
+  color: var(--color-text);
+  font-size: 3.333rem;
+  font-weight: 700;
+}
+
+.card__description {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 400;
+  color: var(--body-text);
+}
+
+.green-text {
+  color: var(--green-text);
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.red-text {
+  color: var(--red-text);
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.overview__title {
+  font-size: 1.3rem;
+  letter-spacing: 0.8px;
+  color: var(--body-text);
+}
+
+.overview__card {
+  text-align: left;
+}
+
+.overview__followers {
+  color: var(--color-text);
+  line-height: 1;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.overview__stats {
+  text-align: right;
+}
+
+@media (min-width: 1200px) {
+  .header__title {
+    font-size: 1.65rem;
+    letter-spacing: 0.8px;
+  }
 }
 
 * {
@@ -66,6 +143,93 @@ html.transtion *::after {
 /* Blocks */
 body {
   background-color: var(--background);
+}
+
+.card {
+  position: relative;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: var(--card-bg);
+  width: 87%;
+  max-width: 20.5rem;
+  margin: auto;
+  padding: 1.5em 0;
+  margin-bottom: 1.7em;
+  border-radius: 0 0 0.33em 0.33em;
+  -webkit-transition: background-color 300ms ease-out;
+  transition: background-color 300ms ease-out;
+}
+
+.card__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card::before {
+  position: relative;
+  top: 0.33rem;
+  left: -0.4rem;
+  margin-left: 0.4rem;
+}
+
+.card__description {
+  margin: 0.5em 0;
+}
+
+.card__stats {
+  position: relative;
+  margin-top: 0.5rem;
+}
+
+.social-icon {
+  margin-right: 1em;
+}
+
+.up-icon {
+  position: relative;
+  top: -0.2rem;
+  left: -0.333rem;
+  margin-left: 0.3rem;
+}
+
+.down-icon {
+  position: relative;
+  top: -0.2rem;
+  left: -0.333rem;
+  margin-left: 0.3rem;
+}
+
+.facebook-card::after,
+.twitter-card::after,
+.instagram-card::after,
+.youtube::after {
+  position: absolute;
+  top: -4px;
+  bottom: 0px;
+  right: 0px;
+  content: "";
+  z-index: -1;
+  border-radius: 0.333em;
+}
+
+.facebook-card::after {
+  background: var(--facebook-border);
 }
 
 .container {
@@ -137,6 +301,61 @@ body {
             align-items: baseline;
     margin: 0 auto;
     width: 69rem;
+  }
+}
+
+.main {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  margin-top: -2rem;
+}
+
+.overview__title {
+  padding: 4.5% 6.5%;
+}
+
+@media (min-width: 600px) {
+  .overview__title {
+    width: 33.8rem;
+    margin: auto;
+    padding: 4.5% 0;
+  }
+  .main__container {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-grid-columns: (16rem)[2];
+        grid-template-columns: repeat(2, 16rem);
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    row-gap: 1.8rem;
+    -webkit-column-gap: 1.8rem;
+            column-gap: 1.8rem;
+    margin-bottom: 2.666em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main {
+    margin-top: -6.45rem;
+  }
+  .main__container {
+    -ms-grid-columns: (16rem)[4];
+        grid-template-columns: repeat(4, 16rem);
+  }
+  .overview__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 69rem;
+    padding: 0 0 2rem 0;
+    margin: auto;
   }
 }
 

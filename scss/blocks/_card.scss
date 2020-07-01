@@ -1,0 +1,67 @@
+.card {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--card-bg);
+    width: 87%;
+    max-width: 20.5rem;
+    margin: auto;
+    padding: 1.5em 0;
+    margin-bottom: 1.7em;
+    border-radius: 0 0 0.33em 0.33em;
+    transition: background-color 300ms ease-out;
+    &__heading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &::before {
+        position: relative;
+        top: 0.33rem;
+        left: -0.4rem;
+        margin-left: 0.4rem;
+    }
+    &__description {
+        margin: 0.5em 0;
+    }
+    &__stats {
+        position: relative;
+        margin-top: 0.5rem;
+    }
+}
+
+.social-icon {
+    margin-right: 1em;
+}
+.up-icon {
+    position: relative;
+    top: -0.2rem;
+    left: -0.333rem;
+    margin-left: 0.3rem;
+}
+
+.down-icon {
+    position: relative;
+    top: -0.2rem;
+    left: -0.333rem;
+    margin-left: 0.3rem;
+}
+
+.facebook-card::after,
+.twitter-card::after, 
+.instagram-card::after,
+.youtube::after {
+    position: absolute;
+    top: -4px;
+    bottom: 0px;
+    right: 0px;
+    content: "";
+    z-index: -1;
+    border-radius: 0.333em;
+}
+
+.facebook-card::after {
+    background: var(--facebook-border);
+}
