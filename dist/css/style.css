@@ -253,43 +253,6 @@ body {
   margin-left: 0.3rem;
 }
 
-/*
-.facebook-card {
-    border-top-color: var(--facebook-border);
-}
-
-.twitter-card {
-    border-top-color: var(--twitter-border);
-}
-
-.youtube-card {
-    border-top-color: var(--youtube-border);
-}
-*/
-/*.instagram-card {
-    border-top: 0.25em solid transparent;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    background-image: 
-        linear-gradient(to right, hsl(227, 47%, 96%), hsl(227, 47%, 96%)),
-        linear-gradient(90deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
-    background-clip: padding-box,
-    border-box;
-    background-origin: padding-box,
-    border-box;
-}
-.instagram-card:hover {
-    border-top: 0.25em solid transparent;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    background: linear-gradient(hsl(231, 53%, 90%),
-        hsl(231, 53%, 90%)),
-    linear-gradient(90deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
-    background-clip: padding-box,
-    border-box;
-    background-origin: padding-box,
-    border-box;
-}*/
 .facebook-card::after,
 .twitter-card::after,
 .instagram-card::after,
