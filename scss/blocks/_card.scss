@@ -11,7 +11,7 @@
     margin: auto;
     padding: 1.5em 0;
     margin-bottom: 1.7em;
-    border-top-style: solid;
+    /*border-top-style: solid;*/
     border-top-width: 4px;
     border-radius: 5px;
     transition: background-color 300ms ease-out;
@@ -48,7 +48,7 @@
     left: -0.333rem;
     margin-left: 0.3rem;
 }
-
+/*
 .facebook-card {
     border-top-color: var(--facebook-border);
 }
@@ -60,12 +60,12 @@
 .youtube-card {
     border-top-color: var(--youtube-border);
 }
-
-.instagram-card {
+*/
+/*.instagram-card {
     border-top: 0.25em solid transparent;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    background: 
+    background-image: 
         linear-gradient(to right, hsl(227, 47%, 96%), hsl(227, 47%, 96%)),
         linear-gradient(90deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
     background-clip: padding-box,
@@ -84,8 +84,37 @@
     border-box;
     background-origin: padding-box,
     border-box;
+}*/
+
+.facebook-card::after,
+.twitter-card::after,
+.instagram-card::after,
+.youtube-card::after {
+    position: absolute;
+    top: -4px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    content: "";
+    z-index: -1;
+    border-radius: 0.333em;
 }
 
+.facebook-card::after {
+    background: var(--facebook-border);
+}
+
+.twitter-card::after {
+    background: var(--twitter-border);
+}
+
+.instagram-card::after {
+    background: linear-gradient(to top right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+}
+
+.youtube-card::after {
+    background: var(--youtube-border);
+}
 
 .card:hover,
 .overview__card:hover {

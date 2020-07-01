@@ -10,7 +10,7 @@
     position: relative;
     width: 3em;
     height: 1.5em;
-    background-color: var(--toggle);
+    background-color: var(--toggle); 
     border-radius: 1.5em;
 }
 
@@ -22,7 +22,7 @@
     border-radius: 50%;
     left: 0.214em;
     bottom: 0.214em;
-    background-color: var(--white);
+    background-color: var(--card-bg); 
     transition: all 300ms ease-out;
     transform: translateX(28px);
 }
@@ -33,6 +33,13 @@
 
 .checkbox:checked + .toggle-switch::after {
     transform: translateX(-3%);
+}
+
+.checkbox:checked + .toggle-switch {
+    background-image: linear-gradient(to top right,
+        hsl(210, 78%, 56%),
+        hsl(146, 68%, 55%));
+    background-color: var(--toggle);
 }
 
 .checkbox:hover:checked + .toggle-switch {

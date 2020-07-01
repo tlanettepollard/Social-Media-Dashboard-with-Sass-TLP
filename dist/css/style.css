@@ -166,7 +166,7 @@ html {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  outline: 1px solid black;
+  /*outline: 1px solid black;*/
 }
 
 html.transition,
@@ -204,7 +204,7 @@ body {
   margin: auto;
   padding: 1.5em 0;
   margin-bottom: 1.7em;
-  border-top-style: solid;
+  /*border-top-style: solid;*/
   border-top-width: 4px;
   border-radius: 5px;
   -webkit-transition: background-color 300ms ease-out;
@@ -253,36 +253,72 @@ body {
   margin-left: 0.3rem;
 }
 
+/*
 .facebook-card {
-  border-top-color: var(--facebook-border);
+    border-top-color: var(--facebook-border);
 }
 
 .twitter-card {
-  border-top-color: var(--twitter-border);
+    border-top-color: var(--twitter-border);
 }
 
 .youtube-card {
-  border-top-color: var(--youtube-border);
+    border-top-color: var(--youtube-border);
 }
-
-.instagram-card {
-  border-top: 0.25em solid transparent;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  background: -webkit-gradient(linear, left top, right top, from(#f0f2fa), to(#f0f2fa)), -webkit-gradient(linear, left top, right top, from(#fdc468), to(#df4996));
-  background: linear-gradient(to right, #f0f2fa, #f0f2fa), linear-gradient(90deg, #fdc468, #df4996);
-  background-clip: padding-box, border-box;
-  background-origin: padding-box, border-box;
+*/
+/*.instagram-card {
+    border-top: 0.25em solid transparent;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-image: 
+        linear-gradient(to right, hsl(227, 47%, 96%), hsl(227, 47%, 96%)),
+        linear-gradient(90deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+    background-clip: padding-box,
+    border-box;
+    background-origin: padding-box,
+    border-box;
 }
-
 .instagram-card:hover {
-  border-top: 0.25em solid transparent;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#d8dcf3), to(#d8dcf3)), -webkit-gradient(linear, left top, right top, from(#fdc468), to(#df4996));
-  background: linear-gradient(#d8dcf3, #d8dcf3), linear-gradient(90deg, #fdc468, #df4996);
-  background-clip: padding-box, border-box;
-  background-origin: padding-box, border-box;
+    border-top: 0.25em solid transparent;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: linear-gradient(hsl(231, 53%, 90%),
+        hsl(231, 53%, 90%)),
+    linear-gradient(90deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+    background-clip: padding-box,
+    border-box;
+    background-origin: padding-box,
+    border-box;
+}*/
+.facebook-card::after,
+.twitter-card::after,
+.instagram-card::after,
+.youtube-card::after {
+  position: absolute;
+  top: -4px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  content: "";
+  z-index: -1;
+  border-radius: 0.333em;
+}
+
+.facebook-card::after {
+  background: var(--facebook-border);
+}
+
+.twitter-card::after {
+  background: var(--twitter-border);
+}
+
+.instagram-card::after {
+  background: -webkit-gradient(linear, left bottom, right top, from(#fdc468), to(#df4996));
+  background: linear-gradient(to top right, #fdc468, #df4996);
+}
+
+.youtube-card::after {
+  background: var(--youtube-border);
 }
 
 .card:hover,
@@ -491,7 +527,7 @@ body {
   border-radius: 50%;
   left: 0.214em;
   bottom: 0.214em;
-  background-color: var(--white);
+  background-color: var(--card-bg);
   -webkit-transition: all 300ms ease-out;
   transition: all 300ms ease-out;
   -webkit-transform: translateX(28px);
@@ -505,6 +541,12 @@ body {
 .checkbox:checked + .toggle-switch::after {
   -webkit-transform: translateX(-3%);
           transform: translateX(-3%);
+}
+
+.checkbox:checked + .toggle-switch {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#378fe6), to(#3eda82));
+  background-image: linear-gradient(to top right, #378fe6, #3eda82);
+  background-color: var(--toggle);
 }
 
 .checkbox:hover:checked + .toggle-switch {
