@@ -4,11 +4,9 @@ Social Media Dashboard Frontend Mentor project using Sass
 ![Design Preview for Social Media Dashboard Challenge from Frontend Mentor](./design/desktop-preview.jpg) 
 
 ## Background
-I completed the Manage Landing Page using Bootstrap, CSS Grid, and Flexbox. It's a mobile-first design starting with screen-size 375px. I used BEM Guidelines for naming my CSS classes. 
+I completed my Social Media Dashboard project using CSS Grid and Flexbox. I wanted to challenge myself during this project, so I decided to use Sass. 
 
-I have added media queries for the following minimum screen width of 768px. 
-
-The page design uses background images on different sections including the section above the footer. 
+When I started this project I thought initially the only code I needed were the CSS Variables. I learned quickly that Sass was an extension for CSS and more than just the variables. 
 
 ## Completed Design
 
