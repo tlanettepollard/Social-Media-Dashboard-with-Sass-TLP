@@ -66,4 +66,38 @@ html.transtion *::after {
 body {
   background-color: var(--background);
 }
+
+.header {
+  background-color: var(--header-bg);
+  padding: 2rem 6.5%;
+  border-radius: 0 0 1em 1em;
+}
+
+@media (min-width: 600px) {
+  .header__container {
+    width: 33.8rem;
+    margin: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header {
+    height: 15rem;
+    padding: 2rem 0;
+    margin: auto;
+  }
+  .header__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    margin: 0 auto;
+    width: 69rem;
+  }
+}
 /*# sourceMappingURL=style.css.map */
