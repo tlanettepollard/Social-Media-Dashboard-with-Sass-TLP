@@ -2,8 +2,8 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "../../scss/blocks/main.scss"
+        "../../scss/blocks/container.scss"
     ],
     "names": [],
-    "file": "main.css"
+    "file": "container.css"
 }
