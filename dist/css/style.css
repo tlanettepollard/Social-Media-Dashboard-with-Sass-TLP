@@ -273,6 +273,8 @@ body {
 }
 
 .overview__card {
+  position: relative;
+  cursor: pointer;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto auto;
@@ -308,6 +310,11 @@ body {
 
 @media (min-width: 600px) {
   .card {
+    width: 100%;
+    max-width: 16rem;
+    margin: 0;
+  }
+  .overview__card {
     width: 100%;
     max-width: 16rem;
     margin: 0;
