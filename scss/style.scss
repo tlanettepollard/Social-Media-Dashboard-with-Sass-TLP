@@ -1,18 +1,18 @@
 /* Utilities */
-@use '/scss/utilities/variables';
+@import '../scss/utilities/variables';
 
 
 /* Base */
-@use '../scss/base/typography';
-@use '../scss/base/reset';
+@import '../scss/base/typography';
+@import '../scss/base/reset';
 
 /* Blocks */
-@use '../scss/blocks/body';
-@use '../scss/blocks/card';
-@use '../scss/blocks/container';
-@use '../scss/blocks/header';
-@use '../scss/blocks/main';
-@use '../scss/blocks/toggle';
+@import '../scss/blocks/body';
+@import '../scss/blocks/card';
+@import '../scss/blocks/container';
+@import '../scss/blocks/header';
+@import '../scss/blocks/main';
+@import '../scss/blocks/toggle';
 
 
 
