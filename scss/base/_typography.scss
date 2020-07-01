@@ -105,3 +105,21 @@ html {
         }
     }
 }
+
+@include screen-m {
+    .attribution   {
+        font-size: 0.65em;
+    }
+}
+
+@include screen-s {
+    .attribution {
+        font-size: 0.60em;
+    }
+}
+
+@include screen-l {
+    .attribution {
+        font-size: 1em;
+    }
+}

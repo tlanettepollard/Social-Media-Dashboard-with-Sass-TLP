@@ -11,3 +11,23 @@ footer {
     margin: auto;
     opacity: 80%;
 }
+
+@include screen-m {
+    footer {
+        .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        }
+    }
+}
+
+@include screen-s {
+    footer {
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+}
