@@ -1,0 +1,47 @@
+.checkbox {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+.toggle-switch {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    width: 3em;
+    height: 1.5em;
+    background-color: var(--toggle);
+    border-radius: 1.5em;
+}
+
+.toggle-switch::after {
+    content: "";
+    position: absolute;
+    height: 1.125em;
+    width: 1.125em;
+    border-radius: 50%;
+    left: 0.214em;
+    bottom: 0.214em;
+    background-color: var(--white);
+    transition: all 300ms ease-out;
+    transform: translateX(28px);
+}
+
+.toggle-switch:hover::after {
+    background-color: var(--hover-toggle);
+}
+
+.checkbox:checked + .toggle-switch::after {
+    transform: translateX(-3%);
+}
+
+.checkbox:hover:checked + .toggle-switch {
+    transition: ease-out 1000ms;
+    background-image: linear-gradient(to top right,
+        hsl(210, 78%, 56%),
+        hsl(146, 68%, 55%));
+}
+
+.toggle-switch:active::after {
+    width: 1.5em;
+}
