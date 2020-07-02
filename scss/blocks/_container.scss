@@ -13,15 +13,14 @@
 }
 
 @include screen-l {
-    .container-border {
-        border-top: none;
+    .container {
+        justify-content: space-between;
         margin: 0;
-        padding: 0;
     }
 }
 
 @include screen-l {
-    .container {
+    .container-border {
         justify-content: space-between;
         margin: 0;
     }
