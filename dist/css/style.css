@@ -199,7 +199,7 @@ body {
           justify-content: center;
   background-color: var(--card-bg);
   width: 87%;
-  height: 235px;
+  height: 350px;
   max-width: 20.5rem;
   margin: auto;
   padding: 1.5em 0;
@@ -221,7 +221,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 10px;
+  padding-top: 2em;
 }
 
 .card::before {
@@ -471,6 +471,21 @@ body {
   height: 0;
   width: 0;
   visibility: hidden;
+}
+
+.toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 3em;
+}
+
+.toggle-title {
+  padding-right: 1em;
 }
 
 .toggle-switch {

@@ -6,7 +6,7 @@
     justify-content: center;
     background-color: var(--card-bg);
     width: 87%;
-    height: 235px;
+    height: 350px;
     max-width: 20.5rem;
     margin: auto;
     padding: 1.5em 0;
@@ -19,7 +19,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-top: 10px;
+        padding-top: 2em;
     }
     &::before {
         position: relative;
