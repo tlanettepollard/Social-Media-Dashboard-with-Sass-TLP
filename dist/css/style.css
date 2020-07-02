@@ -199,7 +199,7 @@ body {
           justify-content: center;
   background-color: var(--card-bg);
   width: 87%;
-  height: 350px;
+  height: 235px;
   max-width: 20.5rem;
   margin: auto;
   padding: 1.5em 0;
@@ -221,7 +221,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 2em;
 }
 
 .card::before {
