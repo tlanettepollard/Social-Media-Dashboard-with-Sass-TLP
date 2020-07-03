@@ -204,7 +204,6 @@ body {
   margin: auto;
   padding: 1.5em 0;
   margin-bottom: 1.7em;
-  /*border-top-style: solid;*/
   border-top-width: 4px;
   border-radius: 5px;
   -webkit-transition: background-color 300ms ease-out;
