@@ -199,7 +199,7 @@ body {
           justify-content: center;
   background-color: var(--card-bg);
   width: 87%;
-  height: 235px;
+  height: 300px;
   max-width: 20.5rem;
   margin: auto;
   padding: 1.5em 0;
@@ -345,7 +345,6 @@ body {
 .container-border {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: -moz-box;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
